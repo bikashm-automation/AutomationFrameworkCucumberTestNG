@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features/SigninCRM.feature",
         glue = {
-                "com.orangehrmlive.projects.website.crm.stepdefinitions",
+                "com.orangehrmlive.stepdefinitions",
                 "com.orangehrmlive.hooks"
         },
         plugin = {
@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
         tags = "@Regression or @Smoke"
 )
 
-public class TestRunnerSigninCRM extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
