@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/SigninCRM.feature",
+        features = "src/test/resources/features/",
         glue = {
                 "com.orangehrmlive.stepdefinitions",
                 "com.orangehrmlive.hooks"
@@ -15,13 +15,13 @@ import org.testng.annotations.Test;
         plugin = {
                 "com.orangehrmlive.hooks.CucumberListener",
                 "pretty",
-                "html:target/cucumber-reports/TestRunnerSigninCRM.html",
-                "json:target/cucumber-reports/TestRunnerSigninCRM.json",
+                "html:target/cucumber-reports/report.html",
+                "json:target/cucumber-reports/report.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,
-        tags = "@Regression or @Smoke"
+        tags = "@author_B"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {
